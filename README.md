@@ -4,12 +4,12 @@ FinMngr is a program that allows users to manage and view financial expenditures
 
 ## Installation/Setup
 
-Install FinMngr.exe
+Install FinMngr.exe\
 Create account
 
 ## Usage
 
-There are six actions that can be executed:
+There are six actions that can be executed:\
 List
 
 
