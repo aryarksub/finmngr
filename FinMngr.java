@@ -1279,14 +1279,14 @@ public class FinMngr extends JFrame {
          */
         public void showProfilePanelHelp()
         {
-            String str = "Edit Profile: Edit name, email, change password, etc.\n"; // describe each button
-            str += "Enter Expense: Enter an expense/payment made.\n";
+            //String str = "Edit Profile: Edit name, email, change password, etc.\n"; // describe each button
+            String str = "Enter Expense: Enter an expense/payment made.\n";
             str += "Add/Rem Categories: Add or remove an expense category in the system.\n";
             str += "Add/Rem Vendors: Add or remove a vendor in the system.\n";
-            str += "Expense Report: View an expense report for user-specified date range.\n";
-            str += "Logout: Log out of your account and return to main screen.\n";
             str += "Edit Categories: Change symbols and budgets for defined categories.\n";
+            str += "Expense Report: View an expense report for user-specified date range.\n";
             str += "View Summary: View a summary of all expenses across a year.\n";
+            str += "Logout: Log out of your account and return to main screen.\n";
             //showHelpMessage(str);
             JOptionPane.showMessageDialog(frame, str);
         }
@@ -2129,7 +2129,7 @@ public class FinMngr extends JFrame {
             g.setColor(Color.BLACK);
             Font font = new Font("SansSerif", Font.BOLD + Font.ITALIC, 50);
             g.setFont(font);
-            String msg = "Edit Categories";
+            String msg = "Add/Remove Categories";
             int strWidth = g.getFontMetrics().stringWidth(msg);
             g.drawString(msg, (width-strWidth)/2, 75);
             font = new Font("Serif", Font.BOLD, 30);
@@ -2155,8 +2155,8 @@ public class FinMngr extends JFrame {
             g.drawString("Symb.", 360+(75-strWidth)/2, 190);
             strWidth = g.getFontMetrics().stringWidth("Budg.");
             g.drawString("Budg.", 440+(100-strWidth)/2, 190);
-            strWidth = g.getFontMetrics().stringWidth("Name/Symbol");
-            g.drawString("Name/Symbol", 800+(145-strWidth)/2, 190);
+            strWidth = g.getFontMetrics().stringWidth("Name");
+            g.drawString("Name", 800+(145-strWidth)/2, 190);
         }
     }
     
@@ -2818,14 +2818,14 @@ public class FinMngr extends JFrame {
             g.setColor(Color.BLACK);
             Font font = new Font("SansSerif", Font.BOLD + Font.ITALIC, 50);
             g.setFont(font);
-            String msg = "Edit Vendors";
+            String msg = "Add/Remove Vendors";
             int strWidth = g.getFontMetrics().stringWidth(msg);
             g.drawString(msg, (width-strWidth)/2, 75);
             
             font = new Font("Serif", Font.BOLD, 30);
             g.setFont(font);
             for (int i = 0; i < 5; i++) {
-                msg = "Category "+(i+1)+": ";
+                msg = "Vendor "+(i+1)+": ";
                 strWidth = g.getFontMetrics().stringWidth(msg);
                 g.drawString(msg, (200-strWidth), 235+100*i);
                 g.drawString(msg, (800-strWidth), 235+100*i);
@@ -3047,7 +3047,7 @@ public class FinMngr extends JFrame {
             g.setColor(Color.BLACK);
             Font font = new Font("SansSerif", Font.BOLD + Font.ITALIC, 50);
             g.setFont(font);
-            String msg = "Edit Category";
+            String msg = "Edit Categories";
             int strWidth = g.getFontMetrics().stringWidth(msg);
             g.drawString(msg, (width-strWidth)/2, 75);
             font = new Font("Serif", Font.BOLD, 30);
@@ -3222,7 +3222,8 @@ public class FinMngr extends JFrame {
                 } else if (i == 2) {
                     text = "Budget";
                 } else if (i >= 3 && i <= 14) {
-                    text = monthsList[i-3];
+                    // "January" is index 1 in monthsList
+                    text = monthsList[i-2];
                 } else if (i == 15) {
                     text = "Total";
                 } else if (i == 16) {
