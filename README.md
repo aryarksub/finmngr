@@ -10,8 +10,8 @@ To install the program, simply download and run FinMngr.exe from this Github rep
 
 There are six actions that can be executed:<br>
 1. Enter Expense
-  - Report up to four payments at a time.
-  - Provide a date, vendor, category, and amount.
+    - Report up to four payments at a time.
+    - Provide a date, vendor, category, and amount.
   - Providing a description for the payment and saving the entered vendor are both optional.
 2. Add/Rem Categories
   - Add up to five categories by providing their names, abbreviations, and (optionally) budgets.
